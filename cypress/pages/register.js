@@ -1,0 +1,46 @@
+export class register{
+    locators={
+        FirstName:'#input-firstname',
+        LastName:'#input-lastname',
+        EMail:'#input[placeholder="E-Mail"]',
+        Telephone:'#input-telephone',
+        Password:'#input-password',
+        Password_Confirm:'#input-confirm',
+        checkbox:'//*[@id="content"]/form/div/div/input[1]',
+        continue:'#content > form > div > div > input.btn.btn-primary'
+
+    }
+    openurl()
+    {
+        cy.visit(Cypress.env('url'))
+    }
+    enterFirstName(fname)
+    {
+        cy.get(this.locators.FirstName).type(fname)
+    }
+     enterLastName(lname)
+    {
+        cy.get(this.locators.LastName).type(lname)
+    }
+     enterEmail(email)
+    {
+        cy.get(this.locators.EMail).type(email)
+    }
+     enterTelephone(number)
+    {
+        cy.get(this.locators.Telephone).type(number)
+    }
+     enterPassword(password)
+    {
+        cy.get(this.locators.Password).type(password)
+        cy.get(this.locators.Password_Confirm).type(password)
+    }
+     entercheckbox()
+    {
+        cy.get(this.locators.checkbox).check();
+    }
+     entercontinue()
+    {
+        cy.get(this.locators.continue).click();
+    }
+}
