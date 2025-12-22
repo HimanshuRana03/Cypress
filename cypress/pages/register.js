@@ -2,12 +2,12 @@ export class register{
     locators={
         FirstName:'#input-firstname',
         LastName:'#input-lastname',
-        EMail:'#input[placeholder="E-Mail"]',
+        EMail:'#input-email',
         Telephone:'#input-telephone',
         Password:'#input-password',
         Password_Confirm:'#input-confirm',
-        checkbox:'//*[@id="content"]/form/div/div/input[1]',
-        continue:'#content > form > div > div > input.btn.btn-primary'
+        checkbox:'input[type="checkbox"]',
+        continue:'input[value="Continue"]'
 
     }
     openurl()

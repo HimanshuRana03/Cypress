@@ -3,6 +3,7 @@ import data from "../../fixtures/registerdata.json";
 const registerobj = new register();
 describe("Automation",()=>{
     it('register flow',()=>{
+        registerobj.openurl()
         registerobj.enterFirstName(data.firstname);
         registerobj.enterLastName(data.lastname)    
         registerobj.enterEmail(data.email);
@@ -10,5 +11,6 @@ describe("Automation",()=>{
         registerobj.enterTelephone(data.phone)
         registerobj.entercheckbox()
         registerobj.entercontinue()
+        cy.get('h1').should('be.visible')
     })
 })
