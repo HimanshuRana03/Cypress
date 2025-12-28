@@ -7,8 +7,8 @@ export class register{
         Password:'#input-password',
         Password_Confirm:'#input-confirm',
         checkbox:'input[type="checkbox"]',
-        continue:'input[value="Continue"]'
-
+        continue:'input[value="Continue"]',
+        aftercontinue:'.pull-right > .btn'
     }
     openurl()
     {
@@ -42,5 +42,9 @@ export class register{
      entercontinue()
     {
         cy.get(this.locators.continue).click();
+    }
+    afterregistercontinue()
+    {
+        cy.get(this.locators.aftercontinue).click();
     }
 }
