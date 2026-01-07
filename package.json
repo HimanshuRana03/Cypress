@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test:addtocart":"npx cypress run --spec cypress/e2e/test/registertest.cy.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^15.8.1"
+    "cypress": "^15.8.1",
+    "cypress-mochawesome-reporter": "^3.8.4"
   }
 }
